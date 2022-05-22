@@ -1,0 +1,154 @@
+body {
+    font-family: "Overpass";
+    background-color: black;
+    color: white;
+    
+    
+}
+
+@media only screen and (min-device-width: 375px) {
+    
+}
+
+#star {
+    height: 50px;
+    width: 50px;
+    line-height:55px;
+    border-radius: 50%;
+    vertical-align: middle;
+    text-align: center; 
+    background-color: hsl(213, 19%, 18%);
+}
+.card {
+    width:50%;
+    margin: 0 auto;
+    display: inline-block;
+    align-items: center;
+   height: 300px; 
+   width: 300px; 
+   color: hsl(217, 12%, 63%);
+   font-weight: 400;
+   padding: 30px;
+   border-radius: 8%;
+   background: hsl(213, 19%, 18%);
+background: linear-gradient(180deg,  hsl(213, 19%, 18%) 0%, hsl(216, 12%, 8%) 20%); 
+}
+
+h1 {
+    color:hsl(0, 0%, 100%);
+    font-weight: 700;
+}
+
+.rating_form{
+  position: relative;
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+.rating_range{
+    padding:0;
+    width:100%;
+}
+.rating_circle {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    line-height:40px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: hsl(213, 19%, 18%);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.rating_circle:hover{
+   background-color: hsl(217, 12%, 63%); 
+   color: hsl(0, 0%, 100%);
+}
+.rating_circle.selected {
+    background-color: hsl(25, 97%, 53%); 
+    color: hsl(0, 0%, 100%); 
+}
+ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.message{
+   font-size: 0.8em;
+
+}
+
+#submitBtn{
+    color:hsl(0, 0%, 100%);
+    width: 300px;
+    height: 40px;
+    background-color:hsl(25, 97%, 53%) ;
+    border-radius: 20px;
+    text-align: center;
+    border: none;
+    padding-bottom: 0vw;
+    display: inline-block;
+  margin: 8px 2px;
+  text-decoration: none;
+  transition: 0.5s;
+  cursor: pointer;
+
+}
+#submitBtn:hover{
+    color:hsl(25, 97%, 53%) ;
+    background-color:hsl(0, 0%, 100%) ;
+}
+
+#thank_you_card{
+    display:flex;
+    align-items: center;
+    text-align: center;
+}
+
+#thank_you_svg{
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+#selected_value{
+    font-size:12px;
+    color:hsl(25, 97%, 53%);
+    margin: 3px;
+
+
+}
+
+.selected_value_pill{
+    background-color:  hsl(213, 19%, 18%);
+    width: 162px;
+    height: 20px;
+    border-radius: 20px;
+    border:none;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+}
+
+#thank_you_message {
+    display: inline-block;
+    text-align: center;
+    margin: 0;
+    width: 90%;
+    font-size: 12px; 
+}
+
+.attribution {
+
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hwb(228 24% 36%);
+  }
+
