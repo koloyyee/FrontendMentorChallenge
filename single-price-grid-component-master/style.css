@@ -1,0 +1,121 @@
+html {
+    font-family: 'Overpass', sans-serif;
+    font-size:16px; 
+    background-color: #f0f0f0;
+    display:flex;
+    justify-content: center;
+}
+.card {
+    width : 71vw;
+    height: 43vh;
+    background-color:white ;
+    margin-top: 100px;
+    padding-bottom: 50px;
+    border-radius: 1%;
+}
+.join_community{
+    margin: 47px;
+}
+
+#join_us_title {
+    color:#2bb2b1;
+}
+
+#thirty_days {
+    color:hsl(71, 73%, 54%);
+}
+#message {
+    color : hsl(218, 22%, 67%);
+}
+.call_for_action{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+
+}
+
+
+
+.subscribe {
+    background-color: #2bb2b1;
+    padding: 2vw;
+    margin:0;
+    border-radius: 0% 0% 0% 3%;
+
+}
+.price {
+    color: hsl(218, 22%, 67%);
+}
+#amount{
+    color: white;
+    font-size:36px;
+}
+.call_for_action {
+    margin-bottom: 30px;
+    padding:0;
+    width:auto;
+    
+}
+.price_message {
+    color: hsl(204, 43%, 93%);
+    opacity: 0.8;
+}
+#why_us{
+    background-color: #4abebd;
+    padding:2vw;
+    border-radius: 0% 0% 3% 0%;
+
+}
+h2{
+    color: hsl(204, 43%, 93%);
+}
+
+#why_us_message{
+    font-size: 0.8em;
+    line-height: 1.5em;
+    color:hsl(204, 43%, 93%);
+    opacity: 0.8;
+    padding: 2vw;
+}
+
+#sign_up {
+    background-color: hsl(71, 73%, 54%);
+    width: 28vw;
+    height: 10vh;
+    border-radius: 0.5vw;
+    font-size: 1rem;
+    font-weight:bold;
+    color:white;
+    box-shadow: 5px 5px 15px #8888;
+    border: none;
+}
+
+
+@media only screen
+  and (max-width: 800px) {
+    .grid {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    .subscribe{
+        border-radius: 0%;
+    }
+    #why_us {
+        border-radius: 0% 0% 3% 3%;
+    }
+    #sign_up {
+        display: inline-block;
+        width: 260px;
+        margin: 0 auto;
+        border-radius: 1vw;
+        height: 10vw;
+        padding-left: 2svw;
+        padding-right: 2vw;
+    }
+    h2, .price, .price_message{
+        padding-left: 2vw;
+        padding-right: 2vw;
+    }
+    h1 {
+        padding-top: 5vw;
+    }
+}
