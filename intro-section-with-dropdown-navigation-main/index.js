@@ -4,7 +4,6 @@ const navItems = document.querySelectorAll(".nav-item");
 
 navItems.forEach((item) => {
   const arrow = item.querySelector(".arrow");
-
   if (arrow) {
     item.addEventListener("mouseenter", () => {
       arrow.src = "./images/icon-arrow-up.svg";
@@ -39,11 +38,13 @@ let subMenuIsOpen = false;
 function mobileSubmenu() {
   navItems.forEach((item) => {
     const dropdown = item.querySelector(".dropdown");
-
+    const arrow = item.querySelector(".arrow");
     item.addEventListener("click", () => {
       if (!subMenuIsOpen) {
+        arrow.src = "./images/icon-arrow-up.svg";
         openSubMenu(dropdown);
       } else {
+        arrow.src = "./images/icon-arrow-down.svg";
         closeSubMenu(dropdown);
       }
     });
