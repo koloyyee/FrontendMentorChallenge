@@ -42,7 +42,7 @@ function mobile() {
   const menu = document.querySelector(".menu");
 
   if (window.innerWidth < 900) {
-    menu.classList.toggle("side-nav");
+    // menu.classList.toggle("");
     // mobile version of hero image
     const right = document.querySelector(".right");
 
