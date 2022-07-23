@@ -1,0 +1,295 @@
+body {
+    font-family: 'Epilogue', sans-serif;
+}
+
+nav {
+    display: inline;
+}
+
+.hamburger {
+    display: none;
+
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: #7c7c7c;
+}
+
+/* handling the nav bar style */
+.nav {
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+}
+
+.logo {
+    width: 6rem;
+    height: 2rem;
+    padding: 1rem;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    flex: 2 2 0;
+
+}
+
+
+.auth-btn {
+    margin-left: auto;
+    margin-right: 3rem;
+    margin-top: 0.4rem;
+}
+
+#register-button {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    background-color: white;
+
+}
+
+
+.nav-item {
+    padding: 0.6rem;
+
+
+}
+
+.nav-item:hover .dropdown {
+    display: block;
+}
+
+.nav-item:hover {
+    font-weight: 600;
+    color: black;
+}
+
+
+.dropdown {
+    background-color: white;
+    box-shadow: 0px 0px 0.8rem #7c7c7c;
+    border-radius: 5px;
+    min-width: 100px;
+    display: none;
+    z-index: 1;
+    position: absolute;
+    top: 110%;
+    padding: 1.5rem;
+    font-weight: 200;
+    transition: all 1s ease-out;
+
+
+}
+
+.dropdown>li {
+    padding-bottom: 1rem;
+    padding-right: 0;
+
+}
+
+.features {
+    position: absolute;
+    left: 0%;
+}
+
+.dropdown.company {
+    position: absolute;
+
+    left: 10%;
+}
+
+/* h1 tagline */
+
+.main {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%
+}
+
+.left {
+    position: relative;
+    top: 4rem;
+    left: 5rem;
+    flex: 1;
+
+}
+
+.right {
+    flex: 1;
+
+}
+
+.right>img {
+
+    width: 70%;
+
+}
+
+.tagline {
+    font-size: 5rem;
+    width: 78%;
+}
+
+/* messages and button */
+
+.message {
+    line-height: 1.8;
+    width: 100%;
+    color: #7c7c7c;
+}
+
+.learn-more-btn {
+    background-color: white;
+    border: 1px solid black;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    margin: 2rem;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.learn-more-btn:hover {
+    cursor: pointer
+}
+
+/* footer social links */
+.social_links {
+    display: flex;
+    width: 70%;
+}
+
+.social_links>li {
+    flex: 1 1 50px;
+}
+
+/* responsive design */
+@media all and (max-width: 900px) {
+    .main {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding: 0;
+    }
+
+    .left {
+        flex: 1;
+        left: 0;
+        top: 0;
+        width: 80%;
+        padding: 0 3rem 0 3rem;
+        text-align: center;
+    }
+
+    .tagline {
+        font-size: 1.2rem;
+        width: auto;
+    }
+
+    .message {
+        line-height: 1;
+        font-size: 1rem;
+    }
+
+    .side-nav {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 10;
+        right: 0;
+        overflow-x: hidden;
+        background-color: white;
+        transition: 0.5s;
+        padding: 0;
+    }
+
+    .hamburger {
+        position: fixed;
+        top: 0;
+        right: 0;
+        border: none;
+        font-size: 50px;
+        background: none;
+        width: 80px;
+        height: 60px;
+        cursor: pointer;
+        transition-duration: 0.5s;
+        z-index: 2;
+
+    }
+
+    .rotate {
+
+        transform: rotate(90deg);
+    }
+
+    .features {
+        position: none;
+        left: 10%;
+    }
+
+    .dropdown {
+        background-color: white;
+        box-shadow: 0px 0px 0.8rem #7c7c7c;
+        border-radius: 5px;
+        min-width: 100px;
+        display: none;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        padding: 1.5rem;
+        font-weight: 200;
+        transition: all 1s ease-out;
+
+
+    }
+
+    .nav-item:hover .dropdown {
+        display: block;
+    }
+
+    .nav-item:hover {
+        font-weight: 600;
+        color: black;
+    }
+
+
+
+    .right>img {
+        object-fit: cover;
+        width: 100%;
+        padding-top: 60px;
+
+    }
+
+    .social_links {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+    }
+
+    .nav-item,
+    .auth-btn {
+        margin-right: auto;
+    }
+
+    .register-btn {
+        margin-top: 5%;
+        margin-left: 35%;
+    }
+
+    li>img {
+        max-width: 60px;
+    }
+
+}
