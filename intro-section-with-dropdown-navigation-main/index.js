@@ -1,19 +1,40 @@
 // create function turn the arrow from point up to down.
 // get nav item
+let menuIsOpen = false;
+
+const hamburger = document.querySelector(".hamburger");
 const navItems = document.querySelectorAll(".nav-item");
 
-navItems.forEach((item) => {
-  const arrow = item.querySelector(".arrow");
-  if (arrow) {
-    item.addEventListener("mouseenter", () => {
-      arrow.src = "./images/icon-arrow-up.svg";
-    });
+function openSubMenu(dropdown, mobile = false) {
+  dropdown.style.display = "block";
 
-    item.addEventListener("mouseleave", () => {
-      arrow.src = "./images/icon-arrow-down.svg";
-    });
-  }
-});
+  return true;
+}
+function closeSubMenu(dropdown, mobile = false) {
+  dropdown.style.display = "none";
+
+  return false;
+}
+
+function mobileSubmenu(mobile = true) {
+  let subMenuIsOpen = false;
+  navItems.forEach((item) => {
+    const dropdown = item.querySelector(".dropdown");
+    const arrow = item.querySelector(".arrow");
+    if (arrow) {
+      item.addEventListener("click", () => {
+        if (!subMenuIsOpen) {
+          arrow.src = "./images/icon-arrow-up.svg";
+          subMenuIsOpen = openSubMenu(dropdown, mobile);
+        } else {
+          arrow.src = "./images/icon-arrow-down.svg";
+          subMenuIsOpen = closeSubMenu(dropdown);
+        }
+      });
+    }
+  });
+}
+mobileSubmenu(false);
 
 // mobile image
 
@@ -21,49 +42,16 @@ function mobile() {
   const menu = document.querySelector(".menu");
 
   if (window.innerWidth < 900) {
-    hamburger.style.display = "block";
+    menu.classList.toggle("side-nav");
     // mobile version of hero image
     const right = document.querySelector(".right");
 
     const img = right.querySelector("img");
     img.src = "./images/image-hero-mobile.png";
 
-    menu.classList.toggle("side-nav");
-
-    mobileSubmenu();
+    mobileSubmenu(true);
   }
 }
-
-let subMenuIsOpen = false;
-function mobileSubmenu() {
-  navItems.forEach((item) => {
-    const dropdown = item.querySelector(".dropdown");
-    const arrow = item.querySelector(".arrow");
-    item.addEventListener("click", () => {
-      if (!subMenuIsOpen) {
-        arrow.src = "./images/icon-arrow-up.svg";
-        openSubMenu(dropdown);
-      } else {
-        arrow.src = "./images/icon-arrow-down.svg";
-        closeSubMenu(dropdown);
-      }
-    });
-  });
-}
-
-function openSubMenu(dropdown) {
-  dropdown.style.display = "block";
-  dropdown.style.position = "relative";
-  subMenuIsOpen = true;
-}
-function closeSubMenu(dropdown) {
-  dropdown.style.display = "none";
-  dropdown.style.position = "absolute";
-  subMenuIsOpen = false;
-}
-
-let menuIsOpen = false;
-const hamburger = document.querySelector(".hamburger");
 
 function toggleBtn() {
   const menuBtn = document.getElementById("menu-toggle-btn");
