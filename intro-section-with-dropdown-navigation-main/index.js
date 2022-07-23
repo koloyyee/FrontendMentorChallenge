@@ -5,12 +5,12 @@ let menuIsOpen = false;
 const hamburger = document.querySelector(".hamburger");
 const navItems = document.querySelectorAll(".nav-item");
 
-function openSubMenu(dropdown, mobile = false) {
+function openSubMenu(dropdown) {
   dropdown.style.display = "block";
 
   return true;
 }
-function closeSubMenu(dropdown, mobile = false) {
+function closeSubMenu(dropdown) {
   dropdown.style.display = "none";
 
   return false;
